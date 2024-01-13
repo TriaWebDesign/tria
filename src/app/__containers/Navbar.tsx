@@ -19,7 +19,7 @@ export default function Navbar() {
   };
   return (
     <>
-      <nav className="flex items-center justify-between px-6 py-4 fixed w-full backdrop-blur-md bg-black/30">
+      <nav className="flex items-center justify-between px-6 py-4 fixed w-full backdrop-blur-md bg-black/30 z-40">
         <div>
           <Image src="/images/main.png" width={180} height={180} alt="logo" />
         </div>
@@ -57,7 +57,7 @@ function Sidebar({ open, toggle }: { open: boolean; toggle: () => void }) {
     <div
       className={`md:hidden fixed w-full h-screen bg-black ${
         open ? "left-0" : "left-[1000px]"
-      } transition-all flex flex-col items-center justify-around`}
+      } transition-all flex flex-col items-center justify-around z-50`}
     >
       <div className="flex items-center gap-8">
         <Image src="/images/logo.png" width={80} height={80} alt="logo" />
